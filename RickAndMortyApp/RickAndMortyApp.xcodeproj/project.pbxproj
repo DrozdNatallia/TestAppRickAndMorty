@@ -9,19 +9,40 @@
 /* Begin PBXBuildFile section */
 		CC19A3682A8E7FA60034FE8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC19A3672A8E7FA60034FE8F /* AppDelegate.swift */; };
 		CC19A36A2A8E7FA60034FE8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC19A3692A8E7FA60034FE8F /* SceneDelegate.swift */; };
-		CC19A36C2A8E7FA60034FE8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC19A36B2A8E7FA60034FE8F /* ViewController.swift */; };
+		CC19A36C2A8E7FA60034FE8F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC19A36B2A8E7FA60034FE8F /* MainViewController.swift */; };
 		CC19A3712A8E7FA90034FE8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC19A3702A8E7FA90034FE8F /* Assets.xcassets */; };
 		CC19A3742A8E7FA90034FE8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC19A3722A8E7FA90034FE8F /* LaunchScreen.storyboard */; };
+		CC19A37C2A8F83C70034FE8F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC19A37B2A8F83C70034FE8F /* CollectionViewCell.swift */; };
+		CC19A37E2A8FDD120034FE8F /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC19A37D2A8FDD120034FE8F /* SectionHeader.swift */; };
+		CC19A3812A8FDFC30034FE8F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CC19A3802A8FDFC30034FE8F /* SnapKit */; };
+		CC19A3852A90D2770034FE8F /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC19A3842A90D2770034FE8F /* MainPresenter.swift */; };
+		CC19A3872A90D42F0034FE8F /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC19A3862A90D42F0034FE8F /* ModuleBuilder.swift */; };
+		CC19A3892A90D43F0034FE8F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC19A3882A90D43F0034FE8F /* Router.swift */; };
+		CC19A38B2A90D60F0034FE8F /* CharactersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC19A38A2A90D60F0034FE8F /* CharactersModel.swift */; };
+		CC19A38D2A90E30A0034FE8F /* NetworkProvaider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC19A38C2A90E30A0034FE8F /* NetworkProvaider.swift */; };
+		CC19A38F2A90F6440034FE8F /* InfoCharactersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC19A38E2A90F6440034FE8F /* InfoCharactersModel.swift */; };
+		CC19A3912A90F66F0034FE8F /* CountOfCharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC19A3902A90F66F0034FE8F /* CountOfCharacterModel.swift */; };
+		CC19A39D2A90F75F0034FE8F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC19A39C2A90F75F0034FE8F /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CC19A3642A8E7FA60034FE8F /* RickAndMortyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC19A3672A8E7FA60034FE8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC19A3692A8E7FA60034FE8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CC19A36B2A8E7FA60034FE8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC19A36B2A8E7FA60034FE8F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CC19A3702A8E7FA90034FE8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC19A3732A8E7FA90034FE8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC19A3752A8E7FA90034FE8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC19A37B2A8F83C70034FE8F /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		CC19A37D2A8FDD120034FE8F /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		CC19A3842A90D2770034FE8F /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		CC19A3862A90D42F0034FE8F /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		CC19A3882A90D43F0034FE8F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		CC19A38A2A90D60F0034FE8F /* CharactersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersModel.swift; sourceTree = "<group>"; };
+		CC19A38C2A90E30A0034FE8F /* NetworkProvaider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvaider.swift; sourceTree = "<group>"; };
+		CC19A38E2A90F6440034FE8F /* InfoCharactersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCharactersModel.swift; sourceTree = "<group>"; };
+		CC19A3902A90F66F0034FE8F /* CountOfCharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountOfCharacterModel.swift; sourceTree = "<group>"; };
+		CC19A39C2A90F75F0034FE8F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC19A3812A8FDFC30034FE8F /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +78,102 @@
 			children = (
 				CC19A3672A8E7FA60034FE8F /* AppDelegate.swift */,
 				CC19A3692A8E7FA60034FE8F /* SceneDelegate.swift */,
-				CC19A36B2A8E7FA60034FE8F /* ViewController.swift */,
+				CC19A3942A90F6DC0034FE8F /* MainModule */,
+				CC19A39B2A90F73E0034FE8F /* CollectionCells */,
+				CC19A3982A90F70D0034FE8F /* Services */,
 				CC19A3702A8E7FA90034FE8F /* Assets.xcassets */,
 				CC19A3722A8E7FA90034FE8F /* LaunchScreen.storyboard */,
 				CC19A3752A8E7FA90034FE8F /* Info.plist */,
 			);
 			path = RickAndMortyApp;
+			sourceTree = "<group>";
+		};
+		CC19A3922A90F6B40034FE8F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CC19A3882A90D43F0034FE8F /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CC19A3932A90F6C10034FE8F /* ModuleBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				CC19A3862A90D42F0034FE8F /* ModuleBuilder.swift */,
+			);
+			path = ModuleBuilder;
+			sourceTree = "<group>";
+		};
+		CC19A3942A90F6DC0034FE8F /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				CC19A3952A90F6EA0034FE8F /* Model */,
+				CC19A3962A90F6F10034FE8F /* View */,
+				CC19A3972A90F6F60034FE8F /* Presenter */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		CC19A3952A90F6EA0034FE8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC19A38A2A90D60F0034FE8F /* CharactersModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC19A3962A90F6F10034FE8F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC19A36B2A8E7FA60034FE8F /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC19A3972A90F6F60034FE8F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC19A3842A90D2770034FE8F /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC19A3982A90F70D0034FE8F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CC19A3932A90F6C10034FE8F /* ModuleBuilder */,
+				CC19A3922A90F6B40034FE8F /* Router */,
+				CC19A3992A90F7160034FE8F /* NetworkProvaider */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CC19A3992A90F7160034FE8F /* NetworkProvaider */ = {
+			isa = PBXGroup;
+			children = (
+				CC19A38C2A90E30A0034FE8F /* NetworkProvaider.swift */,
+				CC19A39A2A90F7230034FE8F /* NetworkModels */,
+				CC19A39C2A90F75F0034FE8F /* Constants.swift */,
+			);
+			path = NetworkProvaider;
+			sourceTree = "<group>";
+		};
+		CC19A39A2A90F7230034FE8F /* NetworkModels */ = {
+			isa = PBXGroup;
+			children = (
+				CC19A38E2A90F6440034FE8F /* InfoCharactersModel.swift */,
+				CC19A3902A90F66F0034FE8F /* CountOfCharacterModel.swift */,
+			);
+			path = NetworkModels;
+			sourceTree = "<group>";
+		};
+		CC19A39B2A90F73E0034FE8F /* CollectionCells */ = {
+			isa = PBXGroup;
+			children = (
+				CC19A37D2A8FDD120034FE8F /* SectionHeader.swift */,
+				CC19A37B2A8F83C70034FE8F /* CollectionViewCell.swift */,
+			);
+			path = CollectionCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +192,9 @@
 			dependencies = (
 			);
 			name = RickAndMortyApp;
+			packageProductDependencies = (
+				CC19A3802A8FDFC30034FE8F /* SnapKit */,
+			);
 			productName = RickAndMortyApp;
 			productReference = CC19A3642A8E7FA60034FE8F /* RickAndMortyApp.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +223,9 @@
 				Base,
 			);
 			mainGroup = CC19A35B2A8E7FA60034FE8F;
+			packageReferences = (
+				CC19A37F2A8FDFC30034FE8F /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = CC19A3652A8E7FA60034FE8F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -134,9 +252,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC19A36C2A8E7FA60034FE8F /* ViewController.swift in Sources */,
+				CC19A38B2A90D60F0034FE8F /* CharactersModel.swift in Sources */,
+				CC19A3892A90D43F0034FE8F /* Router.swift in Sources */,
+				CC19A36C2A8E7FA60034FE8F /* MainViewController.swift in Sources */,
+				CC19A3852A90D2770034FE8F /* MainPresenter.swift in Sources */,
 				CC19A3682A8E7FA60034FE8F /* AppDelegate.swift in Sources */,
+				CC19A37E2A8FDD120034FE8F /* SectionHeader.swift in Sources */,
+				CC19A3912A90F66F0034FE8F /* CountOfCharacterModel.swift in Sources */,
+				CC19A39D2A90F75F0034FE8F /* Constants.swift in Sources */,
+				CC19A3872A90D42F0034FE8F /* ModuleBuilder.swift in Sources */,
+				CC19A37C2A8F83C70034FE8F /* CollectionViewCell.swift in Sources */,
+				CC19A38F2A90F6440034FE8F /* InfoCharactersModel.swift in Sources */,
 				CC19A36A2A8E7FA60034FE8F /* SceneDelegate.swift in Sources */,
+				CC19A38D2A90E30A0034FE8F /* NetworkProvaider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +472,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CC19A37F2A8FDFC30034FE8F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CC19A3802A8FDFC30034FE8F /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC19A37F2A8FDFC30034FE8F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CC19A35C2A8E7FA60034FE8F /* Project object */;
 }
