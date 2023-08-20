@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+final class CollectionViewCell: UICollectionViewCell {
     
     static let reuseId = "collectionCell"
     
@@ -29,43 +29,46 @@ class CollectionViewCell: UICollectionViewCell {
         lbl.backgroundColor = UIColor(red: 38.0 / 255.0, green: 42.0 / 255.0, blue: 56.0 / 255.0, alpha: 1.0)
         lbl.textAlignment = .center
         lbl.textColor = .white
-        lbl.font = lbl.font.withSize(25)
+        lbl.font = lbl.font.withSize(17)
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        
         return lbl
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        contentView.backgroundColor = UIColor(red: 38.0 / 255.0, green: 42.0 / 255.0, blue: 56.0 / 255.0, alpha: 1.0)
-        contentView.addSubview(self.imagesView)
-        contentView.addSubview(self.nameCharacter)
+        self.contentView.backgroundColor = UIColor(red: 38.0 / 255.0, green: 42.0 / 255.0, blue: 56.0 / 255.0, alpha: 1.0)
         
         let radius: CGFloat = 15
-        contentView.layer.cornerRadius = radius
-        contentView.layer.borderWidth = 1
-        contentView.layer.borderColor = UIColor.clear.cgColor
-        contentView.layer.masksToBounds = true
-
+        self.contentView.layer.cornerRadius = radius
+        self.contentView.layer.borderWidth = 1
+        self.contentView.layer.borderColor = UIColor.clear.cgColor
+        self.contentView.layer.masksToBounds = true
+        
+        self.addSubviews()
+        self.setConstraint()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func addSubviews() {
+        self.contentView.addSubview(self.imagesView)
+        self.contentView.addSubview(self.nameCharacter)
+    }
+    
+    private func setConstraint(){
         NSLayoutConstraint.activate([
-           self.imagesView.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor),
-           self.imagesView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 5),
-           self.imagesView.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 5),
-           self.imagesView.rightAnchor.constraint(equalTo: self.contentView.rightAnchor, constant: -5),
-           self.imagesView.heightAnchor.constraint(equalTo: self.contentView.heightAnchor, multiplier: 0.7),
-            
-            
+            self.imagesView.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor),
+            self.imagesView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 5),
+            self.imagesView.widthAnchor.constraint(equalToConstant: 140),
+            self.imagesView.heightAnchor.constraint(equalToConstant: 140),
             self.nameCharacter.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor),
             self.nameCharacter.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -5),
             self.nameCharacter.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 5),
             self.nameCharacter.rightAnchor.constraint(equalTo: self.contentView.rightAnchor, constant: -5),
             self.nameCharacter.heightAnchor.constraint(equalTo: self.contentView.heightAnchor, multiplier: 0.2)
-    
         ])
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     func configured(name: String, image: UIImage) {

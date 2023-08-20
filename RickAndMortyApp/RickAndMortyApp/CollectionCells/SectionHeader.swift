@@ -8,13 +8,13 @@
 import UIKit
 import SnapKit
 
-class SectionHeader: UICollectionReusableView {
+final class SectionHeader: UICollectionReusableView {
     
     static let reuseId = "SectionHeader"
     
     private lazy var title: UILabel = {
         let lbl = UILabel()
-        lbl.font = UIFont.systemFont(ofSize: 55, weight: .semibold)
+        lbl.font = UIFont.systemFont(ofSize: 28, weight: .semibold)
         lbl.textColor = .white
         lbl.textAlignment = .left
         lbl.text = "Characters"
@@ -23,7 +23,7 @@ class SectionHeader: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(self.title)
+        self.addSubview(self.title)
         
         self.title.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
