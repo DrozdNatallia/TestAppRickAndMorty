@@ -13,7 +13,7 @@ protocol DetailedViewBusinessLogic {
     func getInfoOrigin(url: String)
 }
 
-class DetailedViewPresenter {
+final class DetailedViewPresenter {
     
     private weak var view: DetailedViewControllerDisplayLogic?
     private var model: DetailsModel?

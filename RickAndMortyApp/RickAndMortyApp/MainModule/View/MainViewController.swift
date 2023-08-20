@@ -11,7 +11,7 @@ protocol MainViewControllerDisplayLogic: AnyObject {
     func displayData(model: CharactersModel)
 }
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
     
     var presenter: MainViewBusinessLogic?
     private lazy var collectionView: UICollectionView = {
@@ -30,11 +30,28 @@ class MainViewController: UIViewController {
         return collectionView
     }()
     
+    private lazy var blurView: UIVisualEffectView = {
+        let blur = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+        blur.frame = self.view.bounds
+        return blur
+    }()
+    
+    private lazy var activityIndicator: UIActivityIndicatorView = {
+        let activity = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
+        activity.color = .darkGray
+        activity.center = self.view.center
+        activity.hidesWhenStopped = true
+        activity.startAnimating()
+        return activity
+    }()
+    
     var allCharacters: [InfoCharacters] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(self.collectionView)
+        self.view.addSubview(self.blurView)
+        self.view.addSubview(self.activityIndicator)
         
         NSLayoutConstraint.activate([
             self.collectionView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
@@ -75,6 +92,10 @@ extension MainViewController: UICollectionViewDataSource {
                 let name = self.allCharacters[indexPath.row].name
                 guard let image = self.presenter?.getImagebyURL(url: self.allCharacters[indexPath.row].image) else { return }
                 cell.configured(name: name, image: image)
+                DispatchQueue.main.async {
+                    self.activityIndicator.removeFromSuperview()
+                    self.blurView.removeFromSuperview()
+                }
             }
             return cell
         }

@@ -102,7 +102,6 @@
 				CC19A3B72A9241A20034FE8F /* Extension */,
 				CC19A3B22A9241600034FE8F /* DeatailModule */,
 				CC19A3942A90F6DC0034FE8F /* MainModule */,
-				CC19A39B2A90F73E0034FE8F /* CollectionCells */,
 				CC19A3982A90F70D0034FE8F /* Services */,
 				CC19A3702A8E7FA90034FE8F /* Assets.xcassets */,
 				CC19A3722A8E7FA90034FE8F /* LaunchScreen.storyboard */,
@@ -130,6 +129,7 @@
 		CC19A3942A90F6DC0034FE8F /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
+				CC19A39B2A90F73E0034FE8F /* CollectionCells */,
 				CC19A3952A90F6EA0034FE8F /* Model */,
 				CC19A3962A90F6F10034FE8F /* View */,
 				CC19A3972A90F6F60034FE8F /* Presenter */,

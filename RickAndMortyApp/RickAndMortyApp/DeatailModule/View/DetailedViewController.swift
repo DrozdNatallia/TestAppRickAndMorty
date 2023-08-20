@@ -13,7 +13,7 @@ protocol DetailedViewControllerDisplayLogic: AnyObject {
     func getOrigin()
 }
 
-class DetailedViewController: UIViewController {
+final class DetailedViewController: UIViewController {
     
     var presenter: DetailedViewBusinessLogic?
     private lazy var tableView: UITableView = {
@@ -28,6 +28,21 @@ class DetailedViewController: UIViewController {
         table.dataSource = self
         table.delegate = self
         return table
+    }()
+    
+    private lazy var blurView: UIVisualEffectView = {
+        let blur = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+        blur.frame = self.view.bounds
+        return blur
+    }()
+    
+    private lazy var activityIndicator: UIActivityIndicatorView = {
+        let activity = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
+        activity.color = .darkGray
+        activity.center = self.view.center
+        activity.hidesWhenStopped = true
+        activity.startAnimating()
+        return activity
     }()
     
     private var character: InfoCharacters?
@@ -51,7 +66,6 @@ class DetailedViewController: UIViewController {
         ])
         self.presenter?.getCharacterById()
     }
-    
 }
 
 extension DetailedViewController: DetailedViewControllerDisplayLogic {
@@ -149,6 +163,8 @@ extension DetailedViewController: UITableViewDataSource {
                 guard let episodes = episodes else { return UITableViewCell()}
                 let index = indexPath.section - 3
                 cell.configured(nameEpisode: episodes[index].name, infoEpisode: episodes[index].episode, dateEpisode: episodes[index].airDate)
+                    self.activityIndicator.removeFromSuperview()
+                    self.blurView.removeFromSuperview()
                 return cell
             }
         }
