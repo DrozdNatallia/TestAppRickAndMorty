@@ -9,11 +9,11 @@ import UIKit
 
 protocol AsselderBuildProtocol {
     func createMainModule(router: RouterProtocol) -> UIViewController
+    func createDetailedModule(router: RouterProtocol, id: Int) -> UIViewController 
 }
 
 class BuilderClass: AsselderBuildProtocol {
     
-    // MARK: Настройка основного контроллера
     func createMainModule(router: RouterProtocol) -> UIViewController {
         let mainViewController = MainViewController()
         let networkProvaider = NetworkProvaider()
@@ -21,5 +21,14 @@ class BuilderClass: AsselderBuildProtocol {
         let presenter = MainPresenter(view: mainViewController, model: mainModel, provaider: networkProvaider, router: router)
         mainViewController.presenter = presenter
         return mainViewController
+    }
+    
+    func createDetailedModule(router: RouterProtocol, id: Int) -> UIViewController {
+        let detailedViewController = DetailedViewController()
+        let networkProvaider = NetworkProvaider()
+        let detailModel = DetailsModel(character: nil)
+        let presenter = DetailedViewPresenter(view: detailedViewController, provaider: networkProvaider, router: router, id: id, model: detailModel)
+        detailedViewController.presenter = presenter
+        return detailedViewController
     }
 }
