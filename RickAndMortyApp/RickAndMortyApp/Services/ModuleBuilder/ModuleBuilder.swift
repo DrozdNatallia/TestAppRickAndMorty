@@ -13,7 +13,7 @@ protocol AsselderBuildProtocol {
 }
 
 class BuilderClass: AsselderBuildProtocol {
-    
+    // создание главного экрана
     func createMainModule(router: RouterProtocol) -> UIViewController {
         let mainViewController = MainViewController()
         let networkProvaider = NetworkProvaider()
@@ -22,7 +22,7 @@ class BuilderClass: AsselderBuildProtocol {
         mainViewController.presenter = presenter
         return mainViewController
     }
-    
+    // создание экрана с детальной информацией
     func createDetailedModule(router: RouterProtocol, id: Int) -> UIViewController {
         let detailedViewController = DetailedViewController()
         let networkProvaider = NetworkProvaider()

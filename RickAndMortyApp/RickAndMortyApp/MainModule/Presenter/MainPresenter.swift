@@ -29,6 +29,7 @@ final class MainPresenter {
 }
 
 extension MainPresenter: MainViewBusinessLogic {
+    // Получение информации о персонажах
     
     func getInfoCharacters() {
         
@@ -54,6 +55,7 @@ extension MainPresenter: MainViewBusinessLogic {
         return UIImage()
     }
     
+    //открытие второго экрана
     func openDetailedVc(id: Int){
         self.router?.openDetailedViewController(id: id)
     }

@@ -69,7 +69,7 @@ final class DetailedViewController: UIViewController {
 }
 
 extension DetailedViewController: DetailedViewControllerDisplayLogic {
-    
+    // Обновление  данных экрана
     func displayData(model: DetailsModel, episodes: [InfoEpisodes]) {
         
         self.character = model.character
@@ -78,7 +78,7 @@ extension DetailedViewController: DetailedViewControllerDisplayLogic {
             self.tableView.reloadData()
         }
     }
-    
+    // Получение и установка информации о локации
     func setOriginInfo(origin: InfoOrigin) {
         self.origin = origin
         DispatchQueue.main.async {
@@ -97,6 +97,7 @@ extension DetailedViewController: DetailedViewControllerDisplayLogic {
     }
 }
 
+// MARK: UITableViewDelegate
 extension DetailedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
@@ -109,6 +110,7 @@ extension DetailedViewController: UITableViewDelegate {
     }
 }
 
+// MARK: UITableViewDataSource
 extension DetailedViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         if let character = self.character {

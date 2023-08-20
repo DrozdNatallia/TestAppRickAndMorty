@@ -31,7 +31,7 @@ final class DetailedViewPresenter {
 }
 
 extension DetailedViewPresenter: DetailedViewBusinessLogic {
-    
+    // Получение информации о конкретном персонаже по id
     func getCharacterById() {
         guard let id = self.idOfCharacters else { return }
         self.networkProvaider?.getInfoById(id: id, completion: { info in
@@ -51,6 +51,7 @@ extension DetailedViewPresenter: DetailedViewBusinessLogic {
         })
     }
     
+    // получение картинки по url
     func getImagebyURL(url: String) -> UIImage {
         if let url = URL(string: url) {
             do {
@@ -64,6 +65,7 @@ extension DetailedViewPresenter: DetailedViewBusinessLogic {
         return UIImage()
     }
     
+    // получение информации о локации
     func getInfoOrigin(url: String) {
         self.networkProvaider?.getInfoOrigin(url: url, completion: { origin in
             self.view?.setOriginInfo(origin: origin)

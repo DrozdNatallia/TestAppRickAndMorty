@@ -72,7 +72,7 @@ extension MainViewController: MainViewControllerDisplayLogic {
         }
     }
 }
-
+//MARK: UICollectionViewDelegate
 extension MainViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -80,7 +80,7 @@ extension MainViewController: UICollectionViewDelegate {
     }
     
 }
-
+//MARK: UICollectionViewDataSource
 extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return allCharacters.count

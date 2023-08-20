@@ -16,7 +16,7 @@ protocol NetworkProvaiderProtocol {
 }
 
 final class NetworkProvaider: NetworkProvaiderProtocol {
-    
+    // получение общего количества персонажей
     func getcountFromUrl (completion: @escaping (CoutOfCharacters) -> Void) {
         if let url = URL(string: Constants.baseUrl) {
             var urlRequest = URLRequest(url: url)
@@ -38,6 +38,7 @@ final class NetworkProvaider: NetworkProvaiderProtocol {
         }
     }
     
+    // получкние информации о всех персонажах
     func getDataFromURL (count: Int, completion: @escaping ([InfoCharacters]) -> Void) {
         let array = Array(1...count).map{ String($0)}.joined(separator: ",")
         if let url = URL(string: "\(Constants.baseUrl)\(array)") {
@@ -60,9 +61,9 @@ final class NetworkProvaider: NetworkProvaiderProtocol {
         }
     }
     
+    // получение информации о конкретном персонаже по id
     func getInfoById (id: Int, completion: @escaping (InfoCharacters) -> Void) {
         if let url = URL(string: "\(Constants.baseUrl)\(id)") {
-            // print(url)
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = "GET"
             let task = URLSession.shared.dataTask(with: urlRequest) { [weak self] data, _, error in
@@ -82,6 +83,7 @@ final class NetworkProvaider: NetworkProvaiderProtocol {
         }
     }
     
+    // получение подробной информации об эпизодах
     func getInfoEpisodes (url: String, completion: @escaping (InfoEpisodes) -> Void) {
         if let url = URL(string: url) {
             var urlRequest = URLRequest(url: url)
@@ -103,6 +105,7 @@ final class NetworkProvaider: NetworkProvaiderProtocol {
         }
     }
     
+    // получение подробной информации о локации
     func getInfoOrigin (url: String, completion: @escaping (InfoOrigin) -> Void) {
         if let url = URL(string: url) {
             var urlRequest = URLRequest(url: url)
