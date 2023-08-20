@@ -10,10 +10,12 @@ import UIKit
 protocol RouterMain {
     var navigationController: UINavigationController? { get set }
     var assemblyBuilder: AsselderBuildProtocol? { get set }
+    
 }
 
 protocol RouterProtocol: RouterMain {
     func initialViewController()
+    func openDetailedViewController(id: Int)
 }
 
 class Router: RouterProtocol {
@@ -25,11 +27,17 @@ class Router: RouterProtocol {
         self.assemblyBuilder = assemblyBuilder
     }
     
-    // MARK: Инициализация рутового контроллера
     func initialViewController() {
         if let navigationController = self.navigationController {
             guard let homeViewController = assemblyBuilder?.createMainModule(router: self) else { return }
             navigationController.viewControllers = [homeViewController]
+        }
+    }
+    
+    func openDetailedViewController(id: Int) {
+        if let navigationController = self.navigationController {
+            guard let detailedViewController = assemblyBuilder?.createDetailedModule(router: self, id: id) else { return }
+            navigationController.pushViewController(detailedViewController, animated: true)
         }
     }
 }
