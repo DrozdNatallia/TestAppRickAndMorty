@@ -56,9 +56,11 @@ extension MainViewController: MainViewControllerDisplayLogic {
     }
 }
 
-
-
 extension MainViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.presenter?.openDetailedVc(id: indexPath.row + 1)
+    }
     
 }
 

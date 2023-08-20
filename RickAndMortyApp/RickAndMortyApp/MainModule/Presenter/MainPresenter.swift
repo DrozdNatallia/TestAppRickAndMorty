@@ -10,6 +10,7 @@ import UIKit
 protocol MainViewBusinessLogic {
     func getInfoCharacters()
     func getImagebyURL(url: String) -> UIImage
+    func openDetailedVc(id: Int)
 }
 
 final class MainPresenter {
@@ -51,5 +52,9 @@ extension MainPresenter: MainViewBusinessLogic {
             }
         }
         return UIImage()
+    }
+    
+    func openDetailedVc(id: Int){
+        self.router?.openDetailedViewController(id: id)
     }
 }
